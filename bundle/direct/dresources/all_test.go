@@ -82,6 +82,8 @@ var testConfig map[string]any = map[string]any{
 			SchemaName:  "myschema",
 			Name:        "myvolume",
 			Comment:     "Test volume",
+			// Required by CreateVolume; the API refuses a volume without one.
+			VolumeType: catalog.VolumeTypeManaged,
 		},
 	},
 
